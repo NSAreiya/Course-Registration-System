@@ -16,4 +16,4 @@ spring.data.mongodb.socket-timeout=10000
 # 4. Copy this file to application.properties
 
 
-server.port=${PORT:8080}
+server.port=8080
