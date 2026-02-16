@@ -14,3 +14,6 @@ spring.data.mongodb.socket-timeout=10000
 #    $env:MONGODB_URI="mongodb+srv://nsareiya12_db_user:Areiya#2005@cluster0.4jk2gyg.mongodb.net/course_registration?retryWrites=true&w=majority&appName=Cluster0"
 # 3. To set permanently: System Properties > Environment Variables > New
 # 4. Copy this file to application.properties
+
+
+server.port=${PORT:8080}
