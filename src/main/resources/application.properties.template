@@ -1,0 +1,16 @@
+spring.application.name=Course-Registration-Project
+
+# MongoDB Atlas Configuration
+# Use environment variable MONGODB_URI
+spring.data.mongodb.uri=${MONGODB_URI}
+
+# MongoDB connection timeout settings
+spring.data.mongodb.connection-timeout=10000
+spring.data.mongodb.socket-timeout=10000
+
+# HOW TO SET UP:
+# 1. Change your MongoDB Atlas password to a strong one
+# 2. Set environment variable in Windows PowerShell:
+#    $env:MONGODB_URI="mongodb+srv://username:password@cluster0.4jk2gyg.mongodb.net/course_registration?retryWrites=true&w=majority&appName=Cluster0"
+# 3. To set permanently: System Properties > Environment Variables > New
+# 4. Copy this file to application.properties
