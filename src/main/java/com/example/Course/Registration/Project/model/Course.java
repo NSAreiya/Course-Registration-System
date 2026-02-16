@@ -1,10 +1,10 @@
 package com.example.Course.Registration.Project.model;
 
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
-@Entity
+@Document(collection = "courses")
 public class Course {
 
     @Id
@@ -12,6 +12,9 @@ public class Course {
     private String courseName;
     private String trainer;
     private int durationInWeeks;
+    private String photoUrl;
+    private String description;
+    private double price; // in rupees
 
 
     public String getCourseId() {
@@ -44,5 +47,29 @@ public class Course {
 
     public void setDurationInWeeks(int durationInWeeks) {
         this.durationInWeeks = durationInWeeks;
+    }
+
+    public String getPhotoUrl() {
+        return photoUrl;
+    }
+
+    public void setPhotoUrl(String photoUrl) {
+        this.photoUrl = photoUrl;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
     }
 }

@@ -6,7 +6,7 @@ public class PasswordHashing {
     public static void main(String[] args) {
         BCryptPasswordEncoder encoder =new BCryptPasswordEncoder(12);
 
-        String pt ="Admin123";
+        String pt ="demo@123";
         String hashedPassword = encoder.encode(pt);
         System.out.println(hashedPassword +" :");
     }

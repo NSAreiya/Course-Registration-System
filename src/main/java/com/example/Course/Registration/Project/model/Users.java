@@ -1,13 +1,13 @@
 package com.example.Course.Registration.Project.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
-@Entity
+@Document(collection = "users")
 public class Users {
 
     @Id
-    private int id;
+    private String id;
     private String username;
     private String password;
     private String role;
@@ -17,14 +17,19 @@ public class Users {
     }
 
     public void setRole(String role) {
-        this.role = role !=null? role.toUpperCase():null;
+        // Ensure role has ROLE_ prefix
+        if (role != null && !role.startsWith("ROLE_")) {
+            this.role = "ROLE_" + role.toUpperCase();
+        } else {
+            this.role = role != null ? role.toUpperCase() : null;
+        }
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
