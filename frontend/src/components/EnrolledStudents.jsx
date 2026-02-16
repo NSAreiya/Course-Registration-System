@@ -16,7 +16,7 @@ const EnrolledStudents = () => {
 
   const fetchEnrolledStudents = async () => {
     try {
-      const response = await axios.get('http://localhost:8080/admin/courses/enrolled', {
+      const response = await axios.get('https://course-registration-system-1-g9zp.onrender.com/admin/courses/enrolled', {
         withCredentials: true
       });
       setStudents(response.data);

@@ -20,7 +20,7 @@ const AvailableCourses = () => {
 
   const fetchCourses = async () => {
     try {
-      const response = await axios.get('http://localhost:8080/courses', {
+      const response = await axios.get('https://course-registration-system-1-g9zp.onrender.com/courses', {
         withCredentials: true
       });
       setCourses(response.data);
