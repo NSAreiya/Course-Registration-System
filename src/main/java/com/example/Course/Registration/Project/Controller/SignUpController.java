@@ -18,7 +18,7 @@ import com.example.Course.Registration.Project.model.Users;
 
 @RestController
 @RequestMapping("/api")
-@CrossOrigin(origins = "http://localhost:5173", allowCredentials = "true")
+@CrossOrigin(origins = "https://*.vercel.app", allowCredentials = "true")
 public class SignUpController {
 
     @Autowired

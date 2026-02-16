@@ -20,7 +20,7 @@ import com.example.Course.Registration.Project.model.Users;
 
 @RestController
 @RequestMapping("/admin")
-@CrossOrigin(origins = {"http://localhost:5173", "http://localhost:5174"})
+@CrossOrigin(origins = {"https://*.vercel.app", "http://localhost:5174"})
 public class AdminController {
 
     @Autowired
