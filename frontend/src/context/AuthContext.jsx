@@ -26,7 +26,7 @@ export const AuthProvider = ({ children }) => {
 
   const logout = async () => {
     try {
-      await fetch('http://localhost:8080/logout', {
+      await fetch('https://course-registration-system-1-g9zp.onrender.com/logout', {
         method: 'POST',
         credentials: 'include',
       });
