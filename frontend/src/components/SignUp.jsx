@@ -65,7 +65,7 @@ const SignUp = () => {
       };
 
       const response = await axios.post(
-        'http://localhost:8080/api/signup',
+        'https://course-registration-system-1-g9zp.onrender.com/api/signup',
         signupData,
         {
           headers: {

@@ -22,7 +22,7 @@ const AdminCourses = () => {
 
   const fetchCourses = async () => {
     try {
-      const response = await axios.get('http://localhost:8080/admin/courses');
+      const response = await axios.get('https://course-registration-system-ivm7-hxkupeicw-nsareiyas-projects.vercel.app/admin/courses');
       setCourses(response.data);
     } catch (error) {
       console.error('Error fetching courses:', error);
@@ -42,7 +42,7 @@ const AdminCourses = () => {
     setMessage({ type: '', text: '' });
 
     try {
-      await axios.post('http://localhost:8080/admin/courses/add', {
+      await axios.post('https://course-registration-system-ivm7-hxkupeicw-nsareiyas-projects.vercel.app/admin/courses/add', {
         ...formData,
         durationInWeeks: parseInt(formData.durationInWeeks),
         price: parseFloat(formData.price)
@@ -68,7 +68,7 @@ const AdminCourses = () => {
   const handleDelete = async (courseId) => {
     if (window.confirm('Are you sure you want to delete this course?')) {
       try {
-        await axios.delete(`http://localhost:8080/admin/courses/${courseId}`);
+        await axios.delete(`https://course-registration-system-ivm7-hxkupeicw-nsareiyas-projects.vercel.app/admin/courses/${courseId}`);
         setMessage({ type: 'success', text: 'Course deleted successfully!' });
         fetchCourses();
       } catch (error) {

@@ -43,7 +43,7 @@ const Register = () => {
     
     try {
       const response = await axios.post(
-        'http://localhost:8080/courses/register',
+        'https://course-registration-system-1-g9zp.onrender.com/courses/register',
         formData,
         {
           headers: {
