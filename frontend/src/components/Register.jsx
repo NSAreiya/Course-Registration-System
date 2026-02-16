@@ -17,7 +17,10 @@ const Register = () => {
   const courses = [
     { value: 'Java', label: 'Java' },
     { value: 'Spring Boot', label: 'Spring Boot' },
-    { value: 'Python', label: 'Python' }
+    { value: 'Python', label: 'Python' },
+    { value: 'PHP', label: 'PHP' },
+    { value: 'MERN Stack', label: 'MERN Stack' }
+
   ];
 
   const handleChange = (e) => {
